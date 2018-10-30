@@ -1,0 +1,9 @@
+<h1>List all tasks</h1>
+
+<%= link_to "Add your own", new_task_path %>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li> <%= link_to task.title, task_path(task) %> comprimising <%= task.details %> where it is <%= task.completed %> completed</li>
+  <% end %>
+</ul>
